@@ -23,7 +23,7 @@ gulp.task('sass', ['clean', 'compile']);
 gulp.task('build', ['sass']);
 
 // watch task
-gulp.task('watch', ['build'], () => gulp.watch('./sass/**/*', ['build']));
+gulp.task('watch', ['build'], () => gulp.watch('./scss/**/*.*', ['build']));
 
 // default task
 gulp.task('default', () => {

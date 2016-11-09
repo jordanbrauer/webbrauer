@@ -1,0 +1,26 @@
+// _size.scss
+
+// dimensions
+@mixin dimensions($w: null, $h: null, $s: 'box') {
+  @if (not $w) {
+    @warn '$w[width] may not be unitless, was #{$w}.';
+  }
+  width: $w;
+  height: $h;
+  @if ($s != 'box') {
+    @if ($s == 'circ' or 'circle' or 'round') {
+      border-radius: 50%;
+    } @else {
+      @error '$s[shape] must be "box" (default), or "circ", was #{$s}.';
+    }
+  }
+}
+
+// test
+.box {
+  @include dimensions(0, 0);
+  // TODO: add triangle option
+  // border-left: 25px solid transparent;
+  // border-right: 25px solid transparent;
+  // border-bottom: 25px solid black;
+}
