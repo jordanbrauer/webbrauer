@@ -1,0 +1,15 @@
+{
+  "name": "webbrauer",
+  "version": "0.0.1",
+  "main": "index.html",
+  "author": "Jordan Brauer <jbrauer.inc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "gulp default"
+  },
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
