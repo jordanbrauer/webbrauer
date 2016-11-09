@@ -13,7 +13,7 @@ gulp.task('clean', () => del('./css/*.css'));
 
 // compile sass task
 gulp.task('compile', ['clean'], () => {
-  return gulp.src('./webbrauer.scss')
+  return gulp.src('./scss/webbrauer.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(gulp.dest('./css'));
 });
