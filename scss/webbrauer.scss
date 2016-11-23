@@ -1,3 +1,36 @@
 // webbrauer.scss
 
-@import 'mixins/dimensions';
+// user variables/global file
+$test_palette: (
+  red: #f00,
+  green: #0f0,
+  blue: #00f,
+);
+
+@import 'config';
+
+@import 'bin/draw';
+@import 'bin/constrain';
+@import 'bin/fill';
+@import 'bin/stroke';
+
+// testing
+
+
+.test {
+  @include draw(25px, 25px);
+  @include constrain(50px, 50px);
+  @include fill(red);
+  @include stroke(blue);
+}
+
+.test2 {
+  width: draw(25);
+  height: draw(25);
+
+  max-width: constrain(25);
+  max-height: constrain(25);
+
+  fill: fill(red);
+  stroke: stroke(blue);
+}
