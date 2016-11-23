@@ -1,0 +1,12 @@
+@function stroke ($color, $palette: $default_palette) {
+	@if (map-key-exists($color, $palette)) {
+		@return map-get($palette, $color);
+	}
+
+	@debug 'Unknown color: `#{$color}` in `$palette` for function `stroke()`.';
+	@return null;
+}
+
+@mixin stroke ($color, $palette: $default_palette) {
+  stroke: stroke($color, $palette);
+}
