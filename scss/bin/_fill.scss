@@ -1,0 +1,12 @@
+@function fill ($color, $palette: $default_palette) {
+	@if (map-key-exists($color, $palette)) {
+		@return map-get($palette, $color);
+	}
+
+	@debug 'Unknown color: `#{$color}` in `$palette` for function `fill()`.';
+	@return null;
+}
+
+@mixin fill ($color, $palette: $default_palette) {
+  fill: fill($color, $palette)
+}
