@@ -1,0 +1,8 @@
+@function constrain($v) {
+  @return $v;
+}
+
+@mixin constrain ($w, $h) {
+  max-width: constrain($w);
+  max-height: constrain($h);
+}
